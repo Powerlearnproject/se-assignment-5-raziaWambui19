@@ -1,0 +1,666 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/XoLGRbHq)
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=15442862&assignment_repo_type=AssignmentRepo)
+# SE-Assignment-5
+Installation and Navigation of Visual Studio Code (VS Code)
+ Instructions:
+Answer the following questions based on your understanding of the installation and navigation of Visual Studio Code (VS Code). Provide detailed explanations and examples where appropriate.
+
+ Questions:
+
+1. Installation of VS Code:
+   - Describe the steps to download and install Visual Studio Code on Windows 11 operating system. Include any prerequisites that might be needed.![image of my vs screenshoot](image.png)
+
+2. First-time Setup:
+   -User Settings
+
+Open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P on Mac) and type "Preferences: Open Settings (JSON)" to edit the settings directly.
+Key settings to consider:
+json
+Copy code
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "editor.minimap.enabled": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true
+  },
+  "editor.wordWrap": "on",
+  "terminal.integrated.fontSize": 14
+}
+Theme and Icons
+
+Choose a theme: Go to File > Preferences > Color Theme and select one that suits your preference.
+Set file icons: Go to File > Preferences > File Icon Theme and choose an icon set like "Material Icon Theme".
+Font and Cursor Settings
+
+Set your preferred font and cursor settings in the settings JSON:
+json
+Copy code
+{
+  "editor.fontFamily": "'Fira Code', 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorStyle": "line"
+}
+Key Extensions
+Code Formatting and Linting
+
+Prettier - Code formatter: Automatically formats your code.
+ESLint: Integrates ESLint into VS Code.
+Language Support
+
+Python: Essential for Python development, providing IntelliSense, linting, debugging, etc.
+JavaScript (ES6) code snippets: Provides JavaScript code snippets for quick coding.
+Pylance: Enhances the Python extension with faster IntelliSense.
+Jupyter: Allows you to work with Jupyter notebooks.
+Version Control
+
+GitLens: Enhances the built-in Git capabilities with powerful features.
+Docker
+
+Docker: Provides support for Docker container management.
+Remote Development
+
+Remote - SSH: Allows you to use any remote machine as your development environment.
+Remote - Containers: Enables you to develop inside a container.
+Productivity Enhancements
+
+Live Server: Launch a development local server with a live reload feature for static and dynamic pages.
+Path Intellisense: Autocompletes filenames.
+Other Useful Extensions
+
+Bracket Pair Colorizer 2: Colors matching brackets to make code more readable.
+Visual Studio IntelliCode: Provides AI-assisted code completions.
+REST Client: Allows you to send HTTP requests and view responses directly within VS Code.
+Configuring Extensions
+Prettier
+
+Set Prettier as the default formatter:
+json
+Copy code
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
+ESLint
+
+Configure ESLint to work with Prettier:
+json
+Copy code
+{
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
+Optional: Custom Keybindings
+Customize keybindings to improve productivity. Go to File > Preferences > Keyboard Shortcuts and define custom shortcuts for your frequently used commands.
+By configuring these settings and installing these extensions, you can significantly enhance your development experience in VS Code.
+
+
+
+
+
+
+
+
+
+3. User Interface Overview:
+   - Explain the main components of the VS Code user interface. Identify and describe the purpose of the Activity Bar, Side Bar, Editor Group, and Status Bar
+   Activity Bar: Quick access to different views and functionalities.
+Side Bar: Displays content related to the selected view from the Activity Bar.
+Editor Group: Main area for opening and editing files, supporting multiple tabs and split views.
+Status Bar: Provides contextual information and status updates.
+Activity Bar: Quick access to different views and functionalities.
+4. Command Palette:
+   - What is the Command Palette in VS Code, and how can it be accessed? Provide examples of common tasks that can be performed using the Command Palette.
+   The Command Palette in Visual Studio Code (VS Code) is a powerful tool that provides quick access to a wide range of commands and features without having to navigate through menus. It allows you to efficiently perform various tasks using simple text commands.
+   Opening Files and Folders
+
+> File: Open File: Opens a specific file.
+> File: Open Folder: Opens a folder.
+Searching and Replacing
+
+> Search: Find in Files: Opens the search panel to find text within files in your project.
+> Replace in Files: Opens the replace panel to replace text within files in your project.
+Git Commands
+
+> Git: Clone: Clones a Git repository.
+> Git: Commit: Commits changes to the repository.
+> Git: Pull: Pulls changes from the remote repository.
+> Git: Push: Pushes changes to the remote repository.
+Extension Management
+
+> Extensions: Install Extensions: Opens the Extensions view to install new extensions.
+> Extensions: Show Installed Extensions: Lists all installed extensions.
+Editor Actions
+
+> Go to Line...: Jumps to a specific line number in the current file.
+> Format Document: Formats the entire document using the default formatter.
+> Rename Symbol: Renames all occurrences of a symbol (variable, function, etc.) within the file or project.
+Debugging
+
+> Debug: Start Debugging: Starts the debugging process.
+> Debug: Add Configuration: Adds a new debugging configuration.
+> Debug: Open Breakpoints: Opens the breakpoints view.
+Integrated Terminal
+
+> Terminal: Create New Integrated Terminal: Opens a new integrated terminal instance.
+> Terminal: Kill the Active Terminal Instance: Closes the current terminal instance.
+Workspace and Settings
+
+> Preferences: Open Settings (UI): Opens the settings user interface for configuration.
+> Preferences: Open Settings (JSON): Opens the settings file in JSON format for direct editing.
+> View: Toggle Sidebar Visibility: Toggles the visibility of the sidebar.
+Snippets and Code Generation
+
+> Insert Snippet: Inserts a predefined code snippet.
+> Emmet: Expand Abbreviation: Expands an Emmet abbreviation into the corresponding code.
+Miscellaneous
+
+> Reload Window: Reloads the VS Code window.
+> Show All Commands: Lists all available commands in the Command Palette.
+
+5. Extensions in VS Code:
+   -Openining files and folders 
+   Using the Menu
+
+File Menu: Navigate to File > Open File... or File > Open Folder... to select and open the desired file or folder.
+Using Keyboard Shortcuts
+
+Open File: Press Ctrl+O (Windows/Linux) or Cmd+O (macOS) to open a file.
+Open Folder: Press Ctrl+K followed by Ctrl+O (Windows/Linux) or Cmd+K followed by Cmd+O (macOS) to open a folder.
+Using the Command Palette
+
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS), then type File: Open File or File: Open Folder and press Enter.
+Drag and Drop
+
+Simply drag and drop files or folders from your file system into the VS Code window.
+Extensions Enhancing File and Folder Management
+Several extensions can enhance the experience of opening and managing files and folders in VS Code:
+
+Explorer Enhancements
+
+Project Manager: Helps manage multiple projects with a simple interface.
+Bookmarks: Allows you to bookmark specific lines or sections of code for easy navigation.
+Path Intellisense: Autocompletes filenames and paths, making it easier to open files quickly.
+File Management and Navigation
+
+File Utils: Adds commands to copy, move, and rename files directly within the VS Code interface.
+Advanced New File: Allows creating new files and directories with customizable templates.
+Search and Navigation
+
+Search Enhancements: Extensions like Search or Ripgrep enhance the search functionality, making it easier to find and open files by content.
+Project Manager: Organizes and manages projects, allowing you to open and switch between projects efficiently.
+Integration with Version Control
+
+GitLens: Provides powerful Git integration, making it easy to open and manage files within a Git repository.
+Git History: Shows the commit history for the current file, allowing you to open previous versions easily.
+Example Tasks with Extensions
+Opening a File Quickly: Use Path Intellisense to autocomplete file paths as you type in the Command Palette or terminal.
+Managing Projects: Use Project Manager to quickly switch between different projects and open their files and folders.
+
+
+6. Integrated Terminal:
+   - Describe how to open and use the integrated terminal in VS Code. What are the advantages of using the integrated terminal compared to an external terminal?
+Keyboard Shortcut
+
+Windows/Linux: Press Ctrl+ (backtick) or `Ctrl+``.
+macOS: Press Cmd+ (backtick) or `Cmd+``.
+Using the Menu
+
+Go to View > Terminal.
+Command Palette
+
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS), then type Terminal: New Terminal and press Enter.
+Using the Integrated Terminal
+Running Commands: Simply type commands as you would in any terminal.
+Multiple Terminals: You can open multiple terminals by clicking the + icon in the terminal panel or using the command Terminal: New Terminal from the Command Palette.
+Terminal Selection: Use the dropdown menu in the terminal panel to switch between different terminals or shells.
+Advantages of the Integrated Terminal
+Convenience: Having the terminal embedded within VS Code means you don’t need to switch between different applications, enhancing your workflow efficiency.
+
+Context Awareness: The integrated terminal is contextually aware of your current project. It automatically uses the environment settings of your workspace, making it easier to run scripts and commands related to your project.
+
+Ease of Access: The terminal is always accessible from the bottom of the VS Code window, allowing you to quickly execute commands without interrupting your workflow.
+
+Integration with Editor:
+
+File Operations: You can drag and drop files directly from the editor into the terminal to execute them.
+Code Execution: Run code snippets or scripts directly from the editor using the terminal, enhancing productivity.
+Customization:
+
+Themes and Font Size: Customize the appearance of the terminal to match your preferences (e.g., changing the font size, color scheme).
+Shell Configuration: You can configure and use different shells (Bash, PowerShell, Command Prompt, Zsh, etc.) based on your operating system and preference.
+Terminal Features
+
+Split Terminal: Split the terminal into multiple panes to run different commands simultaneously. Use the Split Terminal command or the Terminal: Split Terminal option.
+Integrated Debugging: Start debugging directly from the terminal, with debugging commands and output appearing alongside your code.
+Practical Tips
+Changing Shell: Configure the default shell in VS Code settings. For example, to use PowerShell on Windows or Zsh on macOS, add the following to your settings (settings.json):
+
+json
+Copy code
+"terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+"terminal.integrated.shell.osx": "/bin/zsh",
+Using Terminal Commands: Execute commands like npm start, python script.py, or any other shell command directly in the terminal.
+
+Terminal Tabs: Use Ctrl+Shift+ to create new terminal tabs and keep different tasks organized. You can also rename terminals for better organization.
+
+Example Workflow
+Open Integrated Terminal:
+
+Press Ctrl+ or go to View > Terminal.
+Run a Command:
+
+Navigate to your project folder and run a command like npm install or python script.py.
+Split Terminal:
+
+Split the terminal with the Split Terminal button or Ctrl+\.
+Access Terminal Settings:
+
+Go to File > Preferences > Settings, and search for terminal to customize settings like shell path, font size, and appearance.
+7. File and Folder Management:
+   - Explain how to create, open, and manage files and folders in VS Code. How can users navigate between different files and directories efficiently?
+Managing files and folders efficiently in Visual Studio Code (VS Code) is crucial for maintaining a smooth workflow. Here’s a detailed guide on how to create, open, and manage files and folders, along with tips on navigating between them effectively.
+
+Creating and Opening Files and Folders
+Creating Files and Folders
+Using the Explorer Sidebar
+
+Open Explorer: Click on the Explorer icon in the Activity Bar on the side, or press Ctrl+Shift+E (Windows/Linux) or Cmd+Shift+E (macOS).
+Create New File: Click the New File icon (+) at the top of the Explorer pane or right-click in the Explorer pane and select New File. You can also press Ctrl+N (Windows/Linux) or Cmd+N (macOS) to create a new file.
+Create New Folder: Right-click in the Explorer pane and select New Folder, or click the New Folder icon. Alternatively, use Ctrl+Shift+N (Windows/Linux) or Cmd+Shift+N (macOS).
+Using the Command Palette
+
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS), then type File: New File or File: New Folder and press Enter.
+Using the Terminal
+
+Create File: Navigate to the desired directory in the terminal and use touch filename.extension (e.g., touch index.html).
+Create Folder: Use mkdir foldername to create a new directory.
+Opening Files and Folders
+Using the Explorer Sidebar
+
+Open Folder: Click on File > Open Folder..., or press Ctrl+K followed by Ctrl+O (Windows/Linux) or Cmd+K followed by Cmd+O (macOS).
+Open File: Navigate to the file in the Explorer pane and double-click it, or right-click and select Open.
+Using the Command Palette
+
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS), then type File: Open File or File: Open Folder and select the desired file or folder.
+Drag and Drop
+
+Drag files or folders from your file system into the VS Code window to open them.
+Managing Files and Folders
+Renaming Files and Folders
+Using the Explorer Sidebar
+
+Right-click the file or folder and select Rename, or click on the file or folder name and press F2. Type the new name and press Enter.
+Using the Command Palette
+
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS), then type File: Rename and select the file or folder.
+Moving and Copying Files and Folders
+Using the Explorer Sidebar
+
+Drag and drop files or folders to a new location within the Explorer pane.
+Using the Command Palette
+
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS), then type File: Move or File: Copy, and specify the destination.
+Deleting Files and Folders
+Using the Explorer Sidebar
+
+Right-click the file or folder and select Delete, then confirm the deletion.
+Using the Command Palette
+
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS), then type File: Delete and confirm the action.
+Navigating Between Files and Directories
+Using the Explorer Sidebar
+
+Expand/Collapse Folders: Click the arrow next to a folder to expand or collapse it.
+Navigate to Files: Click on a file in the Explorer pane to open it. Use Alt+Left Arrow (Windows/Linux) or Cmd+[ (macOS) and Alt+Right Arrow (Windows/Linux) or Cmd+] (macOS) to navigate back and forth between files.
+Using Keyboard Shortcuts
+
+Open File: Ctrl+P (Windows/Linux) or Cmd+P (macOS) to quickly search and open files by name.
+Go to Symbol: Ctrl+Shift+O (Windows/Linux) or Cmd+Shift+O (macOS) to search for and navigate to symbols (functions, classes, etc.) within the file.
+Using the Command Palette
+
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS), then use commands like File: Open File or Explorer: Open Folder to navigate.
+Using the Breadcrumbs
+
+The breadcrumb navigation at the top of the editor shows the path to the current file. Click on any part of the breadcrumb to quickly navigate to that directory or file.
+
+8. Managing files and folders efficiently in Visual Studio Code (VS Code) is crucial for maintaining a smooth workflow. Here’s a detailed guide on how to create, open, and manage files and folders, along with tips on navigating between them effectively.
+Open the Explorer: Click on the Explorer icon in the Activity Bar on the side (Ctrl+Shift+E on Windows/Linux, Cmd+Shift+E on macOS).
+
+Create a New File:
+
+Click the New File icon (+) at the top of the Explorer pane or right-click in the Explorer pane and select New File.
+Alternatively, press Ctrl+N (Windows/Linux) or Cmd+N (macOS).
+Create a New Folder:
+
+Right-click in the Explorer pane and select New Folder, or click the New Folder icon.
+Use Ctrl+Shift+N (Windows/Linux) or Cmd+Shift+N (macOS).
+Using the Command Palette
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS).
+Type File: New File or File: New Folder and press Enter.
+Using the Terminal
+Create a File: Navigate to the desired directory and use touch filename.extension (e.g., touch index.html).
+Create a Folder: Use mkdir foldername.
+Opening Files and Folders
+Using the Explorer Sidebar
+Open a Folder: Click File > Open Folder..., or press Ctrl+K, then Ctrl+O (Windows/Linux) or Cmd+K, then Cmd+O (macOS).
+Open a File: Navigate to the file in the Explorer pane and double-click it, or right-click and select Open.
+Using the Command Palette
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS).
+Type File: Open File or File: Open Folder and select the desired file or folder.
+Drag and Drop
+Drag files or folders from your file system into the VS Code window to open them.
+Managing Files and Folders
+Renaming Files and Folders
+Using the Explorer Sidebar:
+
+Right-click the file or folder and select Rename, or click on the file or folder name and press F2. Type the new name and press Enter.
+Using the Command Palette:
+
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS), then type File: Rename and select the file or folder.
+Moving and Copying Files and Folders
+Using the Explorer Sidebar:
+
+Drag and drop files or folders to a new location within the Explorer pane.
+Using the Command Palette:
+
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS), then type File: Move or File: Copy, and specify the destination.
+Deleting Files and Folders
+Using the Explorer Sidebar:
+
+Right-click the file or folder and select Delete, then confirm the deletion.
+Using the Command Palette:
+
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS), then type File: Delete and confirm the action.
+Navigating Between Files and Directories
+Using the Explorer Sidebar
+Expand/Collapse Folders: Click the arrow next to a folder to expand or collapse it.
+Navigate to Files: Click on a file in the Explorer pane to open it. Use Alt+Left Arrow (Windows/Linux) or Cmd+[ (macOS) and Alt+Right Arrow (Windows/Linux) or Cmd+] (macOS) to navigate back and forth between files.
+Using Keyboard Shortcuts
+Open File Quickly: Press Ctrl+P (Windows/Linux) or Cmd+P (macOS) to open the Quick Open dialog, allowing you to search for files by name quickly.
+Go to Symbol: Press Ctrl+Shift+O (Windows/Linux) or Cmd+Shift+O (macOS) to search for and navigate to symbols (functions, classes, etc.) within the file.
+Using the Command Palette
+Open the Command Palette with Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS).
+Use commands like File: Open File or Explorer: Open Folder to navigate.
+Using Breadcrumbs
+The breadcrumb navigation at the top of the editor shows the path to the current file. Click on any part of the breadcrumb to quickly navigate to that directory or file.
+
+9. Debugging in VS Code:
+   - Outline the steps to set up and start debugging a simple program in VS Code. What are some key debugging features available in VS Code?
+Step 1: Install VS Code and Required Extensions
+Download and Install VS Code: Ensure you have the latest version of VS Code installed. You can download it from the official VS Code website.
+
+Install the Required Extension:
+
+For languages like Python, JavaScript, C++, etc., install the corresponding extension:
+Python: Install the Python extension by Microsoft.
+JavaScript/TypeScript: No additional extension is needed, but ensure you have Node.js installed.
+C++: Install the C/C++ extension by Microsoft.
+Step 2: Open Your Project
+Open VS Code: Start VS Code.
+Open Your Project Folder: Go to File > Open Folder... and select your project folder.
+Step 3: Configure Debugger
+Open the Debug View: Click on the Run and Debug icon in the Activity Bar or press Ctrl+Shift+D (Windows/Linux) or Cmd+Shift+D (macOS).
+
+Create a Debug Configuration:
+
+Click on create a launch.json file link or the gear icon (⚙️) to open the launch.json file.
+Select the environment for your language (e.g., Node.js, Python, C++).
+Example configurations:
+
+Python:
+
+json
+Copy code
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
+JavaScript/TypeScript:
+
+json
+Copy code
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Program",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}"
+    }
+  ]
+}
+C++:
+
+json
+Copy code
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C++ Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/a.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build"
+    }
+  ]
+}
+Step 4: Set Breakpoints
+Set Breakpoints:
+Click in the gutter to the left of the line numbers in your code to set breakpoints. A red dot will appear, indicating a breakpoint.
+Step 5: Start Debugging
+Start Debugging:
+Click the green play button (Start Debugging) or press F5.
+Alternatively, select a configuration and click the Run button (▶️) in the Debug panel.
+Key Debugging Features in VS Code
+Breakpoints:
+
+Set breakpoints by clicking in the gutter next to the line numbers. You can also use F9 to toggle breakpoints.
+Call Stack:
+
+View the call stack to see the function call sequence. This is available in the Call Stack section of the Debug pane.
+Variables:
+
+Inspect variables and their values in the Variables section. You can hover over variables in the editor to see their values.
+Debug Console:
+
+Use the Debug Console to interact with the program while it is paused. You can execute commands or evaluate expressions.
+Watch Expressions:
+
+Add watch expressions to monitor specific variables or expressions. Click the + icon in the Watch section to add an expression.
+Debugging Controls:
+
+Use the debugging controls to step through code:
+Continue (F5): Resume execution until the next breakpoint.
+Step Over (F10): Execute the current line of code and move to the next line.
+Step Into (F11): Step into functions called at the current line.
+Step Out (Shift+F11): Execute the remaining code in the current function and return to the calling function.
+Conditional Breakpoints:
+
+Right-click a breakpoint and select Edit Breakpoint to add conditions. This allows the breakpoint to be hit only when certain conditions are met.
+Exception Breakpoints:
+
+Enable exception breakpoints to pause execution when an exception is thrown. Go to the Breakpoints section in the Debug pane and click the gear icon to enable or disable exception breakpoints.
+Debugging Configuration:
+
+Customize debugging configurations in the launch.json file. You can specify different configurations for running tests, attaching to processes, or debugging different environments.
+Example: Debugging a Simple Python Program
+Create a Python File:
+
+Create a file named hello.py with the following content:
+python
+Copy code
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("World")
+Configure launch.json (if not already configured):
+
+json
+Copy code
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
+Set a Breakpoint:
+
+Click in the gutter next to print(f"Hello, {name}!") to set a breakpoint.
+Start Debugging:
+
+Press F5 or click the green play button. The program will start, and execution will pause at the breakpoint.
+Inspect Variables:
+
+Use the Debug Console and the Variables section to inspect variables and evaluate expressions.
+10. Using Source Control:
+    - How can users integrate Git with VS Code for version control? Describe the process of initializing a repository, making commits, and pushing changes to GitHub.
+Step 1: Install Git
+Download and Install Git:
+
+Download Git from the official Git website.
+Follow the installation instructions for your operating system.
+Verify Installation:
+
+Open a terminal (Command Prompt, PowerShell, or Terminal on macOS/Linux) and run:
+bash
+Copy code
+git --version
+This should display the installed version of Git.
+Step 2: Set Up Git in VS Code
+Install Git Extension:
+
+VS Code comes with built-in Git support. Make sure you have the Git extension enabled by going to the Extensions view (Ctrl+Shift+X on Windows/Linux or Cmd+Shift+X on macOS) and searching for "Git".
+Configure Git:
+
+Set your user name and email, which will be used for your commits:
+bash
+Copy code
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+Step 3: Initialize a Git Repository
+Open Your Project Folder:
+
+Open VS Code and go to File > Open Folder... to select your project folder.
+Initialize Git Repository:
+
+Open the terminal in VS Code (Ctrl+`` or Terminal>New Terminal`).
+Navigate to your project folder and run:
+bash
+Copy code
+git init
+This creates a new Git repository in your project folder.
+Step 4: Stage and Commit Changes
+Stage Changes:
+
+Stage files for commit using:
+bash
+Copy code
+git add .
+This stages all changes. You can also stage specific files:
+bash
+Copy code
+git add path/to/file
+Commit Changes:
+
+Commit the staged changes with a commit message:
+bash
+Copy code
+git commit -m "Initial commit"
+Step 5: Connect to a Remote Repository (GitHub)
+Create a Repository on GitHub:
+
+Go to GitHub and log in.
+Click on the + icon in the upper-right corner and select New repository.
+Name your repository and click Create repository.
+Link Your Local Repository to GitHub:
+
+Copy the repository URL from GitHub. It will look something like https://github.com/yourusername/yourrepository.git.
+
+In the terminal, add the remote repository:
+
+bash
+Copy code
+git remote add origin https://github.com/yourusername/yourrepository.git
+Step 6: Push Changes to GitHub
+Push Commits:
+Push your commits to GitHub using:
+bash
+Copy code
+git push -u origin master
+Replace master with main if your default branch is named main.
+Key Git Features in VS Code
+Source Control Panel:
+
+Click on the Source Control icon in the Activity Bar or press Ctrl+Shift+G (Windows/Linux) or Cmd+Shift+G (macOS).
+Here, you can stage changes, commit, view history, and more.
+Inline Git Commands:
+
+Use the Source Control panel to stage, commit, and push changes directly. You can also resolve merge conflicts and view diffs.
+GitLens Extension:
+
+Enhance Git functionality with the GitLens extension. It provides rich Git insights, such as blame annotations, repository history, and advanced search capabilities.
+Example Workflow
+Initialize Repository:
+
+bash
+Copy code
+git init
+Stage and Commit Changes:
+
+bash
+Copy code
+git add .
+git commit -m "Initial commit"
+Add Remote Repository:
+
+bash
+Copy code
+git remote add origin https://github.com/yourusername/yourrepository.git
+Push Changes:
+
+bash
+Copy code
+git push -u origin master
+ Submission Guidelines:
+- Your answers should be well-structured, concise, and to the point.
+- Provide screenshots or step-by-step instructions where applicable.
+- Cite any references or sources you use in your answers.
+- Submit your completed assignment by 1st July
